@@ -11,6 +11,7 @@ router.get("/", function (req, res, next) {
                 banners 
               INNER JOIN 
                 users ON banners.user_id = users.id
+              WHERE banners.status = 1
               ORDER BY 
                 banners.id DESC;
               SELECT news.id, news.title,
@@ -25,7 +26,7 @@ router.get("/", function (req, res, next) {
               INNER JOIN users ON news.user_id = users.id
               INNER JOIN categories ON news.category_id = categories.id
               WHERE categories.id = 1
-              ORDER BY news.id DESC;
+              ORDER BY news.id DESC LIMIT 5;
               SELECT news.id, news.title,
                 news.thumbnail,
                 users.id AS user_id,
@@ -38,7 +39,7 @@ router.get("/", function (req, res, next) {
               INNER JOIN users ON news.user_id = users.id
               INNER JOIN categories ON news.category_id = categories.id
               WHERE categories.id = 2 
-              ORDER BY news.id DESC;
+              ORDER BY news.id DESC LIMIT 5;
               SELECT news.id, news.title,
                 news.thumbnail,
                 users.id AS user_id,
@@ -55,7 +56,7 @@ router.get("/", function (req, res, next) {
   connection.query(sql, (error, result) => {
     if (error) return res.send(error.message)
 
-    res.render("index", { banners: result[0], publics: result[1], activities: result[2] });
+    res.render("index", { banners: result[0], publics: result[1], activities: result[2], features: result[3] });
   })
 });
 
@@ -69,13 +70,13 @@ router.get("/news/:id", (req, res, news) => {
                 news.id, news.title,
                 news.thumbnail, news.detail,
                 news.created_at, news.updated_at,
-                categories.id AS category_id
-                categories.name AS category_name
+                categories.id AS category_id,
+                categories.name AS category_name,
                 users.id AS users_id,
-                user.name AS user_name
+                users.name AS user_name
               FROM news 
               INNER JOIN categories ON news.category_id = categories.id
-              INNER JOIN users ON news.user_id = users.user_id
+              INNER JOIN users ON news.user_id = users.id
               WHERE news.id = ?`;
   connection.query(sql, [id], (error, result) => {
     if (error) return res.send(error.message);
