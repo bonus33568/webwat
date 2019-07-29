@@ -11,12 +11,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet" />
-
   <style>
     body {
       font-family: "Prompt", sans-serif;
     }
-
+    
     body {
       /*background-image: url("img/DTHCM0888WatChiangChom.jpg");*/
       background-color: #808080;
@@ -29,8 +28,9 @@
   <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v3.3"></script>
   <div class="container ">
-    <img class="w-100" src="/img/a.jpg">
-
+    <img class="w-100"
+      src="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.15752-9/67637298_955556938120332_5516354230027288576_n.jpg?_nc_cat=106&_nc_eui2=AeGmnAOzXaSsWM5dN6HW6GCr5X3lKvfo9oH6CQ-QlzcJR0aOvt5_Z6CtKhBMfqjTs7ani205YmYKgfaSeul2nJUyZdc4w-CPSqUNfQXyAlf0Kw&_nc_oc=AQlDmPA-TM6XTT9VKrZyqnsmN3yh5-LR2bECy5X1OYdPvy2nJKV9f1XIboC_UrB99N8&_nc_ht=scontent.fbkk14-1.fna&oh=e99601d59853dd77f6223e4ef54bed2c&oe=5DA4C3C4"
+      alt="ฟ้อนรำ" />
     <nav class="navbar navbar-expand-lg navbar-light bg-light border">
       <a class="navbar-brand" href="#"><i class="fas fa-gopuram"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -44,21 +44,27 @@
             <a class="nav-link" href="#">หน้าแรก <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ข่าวประชาสัมพันธ์</a>
+            <a class="nav-link" href="index.ejs">ข่าวประชาสัมพันธ์</a>
+            
+
+
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               เกี่ยวกับวัด
             </a>
+            
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="history.ejs">สิ่งทีน่าสนใจ</a>
-              <a class="dropdown-item" href="#"></a>
+              <a class="dropdown-item" href="#">แกลลอรี่</a>
+              <a class="dropdown-item" href="#">บทสวด</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="">ติดต่อเรา</a>
+              <a class="dropdown-item" href="#">ติดต่อเรา</a>
             </div>
           </li>
+          <li class="nav-item">
 
+          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
@@ -72,12 +78,21 @@
       <div class="col-9">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <% banners.map((banner, index) => { %>
-            <div class="carousel-item <%= index + 1 == 1 ? 'active' : '' %> ">
-              <img src="<%= banner.path %>" class="d-block w-100" alt="..." />
+            <div class="carousel-item active">
+              <img
+                src="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.15752-9/67789490_1227230064125622_128863093487828992_n.jpg?_nc_cat=106&_nc_eui2=AeHwyj-jgprFwNB3r7nsn694aRkvdkkgQGFswzVEQmM9Q-a9xQ_TVPgvEvGC5WdS1I-Q5YdH-B58t7PGIyMQ4oLkbe0GSF8ZkfftwBHJsFP15g&_nc_oc=AQmPwyEzIEWHUeE4lqrxVoqp67hxgI_8X3En-cKo-w1GZcaYRuL9gYGV-iBJ8EaKV9k&_nc_ht=scontent.fbkk14-1.fna&oh=7b3c4ebe8d33d6a74970b40df160c815&oe=5DDF2C29"
+                class="d-block w-100" alt="..." />
             </div>
-            <% }) %>
-
+            <div class="carousel-item">
+              <img
+                src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/67766691_1739072636392025_7975931573511913472_n.jpg?_nc_cat=109&_nc_eui2=AeEqhehJYXY-kv4Ashhggji4WL14--k0jFLRFBRIK-nmVk-zJ3VdznaenfuOD0cawhddcqxfYBxZPZDujv2X_QWJ5p9TvDLeUrTAJ-qHnVPN3w&_nc_oc=AQkmXcKQ4xyUCYzOLsQeMFM-HHccKbOOQBHyD1biGjdyPGBmLK1GrxeDatMDM5DpaQw&_nc_ht=scontent.fbkk10-1.fna&oh=a8661bfc1d48091f2ed00a12639fc1ff&oe=5DEA8402"
+                class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.15752-9/67393586_1121168244742187_3434419943402110976_n.jpg?_nc_cat=100&_nc_eui2=AeHSqNr0TRoWrtIQY9c7RSfySAS4Y-nbYXy14dwQCPcb633j02a2C6htuNpLj9Nnnvyi_SkUYnTradAcW8v4Rup2E0wso_FXEjXGkEdfN3svoA&_nc_oc=AQmCvM2jxryjmMDpVHUEqNqJJgUVzSiICnOUuxIdeuhxcemR5Hb1TAYqfYs96I6h-6I&_nc_ht=scontent.fbkk14-1.fna&oh=fc53b43b4017120daec0ac4a2ab660c7&oe=5DDB9BF8"
+                class="d-block w-100" alt="..." />
+            </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -91,9 +106,11 @@
         <nav class="mt-2">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-              aria-controls="nav-home" aria-selected="true">ประวัติ</a>
+              aria-controls="nav-home" aria-selected="true">ประวัติวัดอินทขีลสะดือเมือง</a>
+
             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
               aria-controls="nav-profile" aria-selected="false">รูปภาพกิจกรรม</a>
+
             <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
               aria-controls="nav-contact" aria-selected="false">แหล่งความรู้</a>
           </div>
@@ -101,45 +118,96 @@
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <ul class="list-group">
-              <% publics.map((item, index) => { %>
-              <li class="list-group-item"><a href="/news/<%= item.id %>"><%= item.title %></a>
-              
+              <li class="list-group-item">วัดเชียงโฉม (Chiang Chom Temple) ตั้งอยู่ที่ ถนนประชาอุทิศ ตำบลช้างเผือก
+                อำเภอเมือง จังหวัดเชียงใหม่
+                สร้างขึ้นในช่วงพุทธศตวรรษที่ 21 ในรัชสมัยพระเจ้าติโลกราช ในอดีตบริเวณดังกล่าวคือ “เวียงเชียงโฉม”
+                เป็นเมืองหน้าด่านของเชียงใหม่ ชาวบ้านในละแวกนี้เรียกว่า “วัดเจดีย์ปล่อง” ตามลักษณะขององค์เจดีย์
+                ในสมัยพระเจ้ากาวิละ พระองค์ทรงฟื้นฟูเมืองเชียงใหม่
+                โดยการกวาดต้อนชาวบ้านจากเมืองสิบสองปันนามาสร้างฟื้นฟูเมืองเชียงใหม่ แต่วัดเชียงโฉมไม่ได้รับการฟื้นฟู
+                เนื่องจากเน้นฟื้นฟูวัดที่ตั้งอยู่ในเขตกำแพงเมืองชั้นในเป็นสำคัญ วัดเชียงโฉมจึงกลายเป็นวัดร้าง
+                ต่อมาประมาณปี พ.ศ. 2547 ชาวบ้านในชุมชนเชียงโฉมได้ร่วมแรงร่วมใจกันบูรณะวัดขึ้นใหม่อีกครั้ง
+                ปัจจุบันเป็นวัดที่มีพระจำพรรษาอยู่
+                <br>
+
               </li>
-              <% }) %>
+              <li class="list-group-item">ที่อยู่: วัดเวียงเชียงโฉม ถ.ประชาอุทิศ ต.ช้างเผือก อ.เมือง จ.เชียงใหม่
+              </li>
+
             </ul>
           </div>
           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            <ul class="list-group">
-              <% activities.map((activity, index) => { %>
-              <li class="list-group-item"><a href="/news/<%= activity.id %>"><%= activity.title %></a></li>
-              <% }) %>
-            </ul>
+            <br><b>ทำบุญทอดกฐินสามัคคีมมากุศล </b></br>
+            <br> </br><img
+              src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/67083063_759286311140564_1746871144696250368_n.jpg?_nc_cat=110&_nc_eui2=AeFYmsFdQqDR4CYMaY0aqL546uGHqKc1X3zJrw4uptu6NCgyWZxKIycZs1s5BppXKTN5QneDrwXJ9FH--dffY4BuhLLqcPonMNLIiO5bBKPJNQ&_nc_oc=AQljmW5vFZ-0oDtrPuRvIfh_UB_QomVsKJyGrBjOterXcHoSJwOliyikXNNAHThxTFc&_nc_ht=scontent.fbkk10-1.fna&oh=3fd1dea77f373c677c6895159eafe358&oe=5DDCA876"
+              class="d-block w-100" alt="..." />
+            </p>
+
+            </p>
           </div>
           <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            หน้า3
+            <br><b> วัดเจดีย์ปล่อง</b></br>
+            ปรากฏหลักฐานการก่อสร้างราวพุทธศตวรรษที่ 21 สร้างขึ้นในรัชสมัยพญาติโลกราชถึงพญาแก้ว
+            เป็นศิลปะล้านนาระยะที่ 3
+            โดยมีลักษณะรูปแบบศิลปกรรมเป็นเจดีย์ทรงกลมยังไม่ได้ทำการขุดแต่งจึงไม่สามารถทราบลักษณะฐานได้
+            เหนือขึ้นไปเป็นชั้นกลมย่อ 7 ชั้นมีซุ้มประดิษฐานพระพุทธรูปอยู่โดยรอบแต่ละชั้น
+            วัดเจดีย์ปล่อง หรือ วัดเชียงโฉม ตั้งอยู่ที่ซอยเจดีย์ปล่องเยื้องประตูสถาบันราชภัฏเชียงใหม่ทางทิศเหนือ
+            ปรากฏชื่อของวัดเชียงโฉมในปี พ.ศ.2088 ในสมัยพระนางจิรประภาเทวี
+            สมัยนั้นเจ้าฟ้าเมืองนายนำพวกเงี้ยวได้ยกทัพมาตีเมืองเชียงใหม่ตั้งทัพอยู่ที่เวียงสวนดอกแล้วเคลื่อนทัพมาทางค่ายเชียงโฉม
+            เข้าตีเมืองเชียงใหม่ สันนิษฐานว่าสมัยนั้นเชียงโฉมคงมีฐานะเป็นเมืองหน้าด่านของเชียงใหม่
+             
+
+            <img
+              src="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.15752-9/67818406_372039716836205_1557608222477516800_n.jpg?_nc_cat=111&_nc_eui2=AeGGptbUKlsni4vq9jMesbbFEQ_Ao2YBbhiYmQwk7dSIBPxl5c_R_J1JXBzYfyjPnQGTrKDj3VO4rMFueWfXKWdfXGw9fzXRXqwlkKkyy0GkHg&_nc_oc=AQmbhdj4tAgcG95eLoHRkA4zWCnivHkKqB_b2qFJv2fqJg_n9cz1SvA5l5x-qIqIgrM&_nc_ht=scontent.fbkk14-1.fna&oh=ed5d4636d352067118f3041ca6d51024&oe=5DE4DA09"
+              class="d-block w-100" alt="..." />
+            </p>
+
+
+
+
           </div>
         </div>
         <div class="row mt-3">
-          <% features.map((feature, index) => { %>
           <div class="col-md-4">
             <div class="card">
-              <img class="card-img-top" src="<%= feature.thumbnail %>" alt="<%= feature.title %>" />
+
               <div class="card-body">
+                <h5 class="card-title">รูปภาพ</h5>
                 <p class="card-text">
-                  <%= feature.title %>
+
+                  <img
+                    src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/67410891_410313326257140_8595711103969787904_n.jpg?_nc_cat=105&_nc_eui2=AeHUlthfHiXjzKaXK_xgmBDeYMqalEWbNhSaIFpWvgHNyPY-3FcNXDeDzNpa7iLjyxFiBF-lhEzRKydiVkOt0MIBPzP1SDkvfXMQDZK0gcmB0A&_nc_oc=AQmAnqTrRsVFhyysArSKXIwtg_y34MdYNaRIDHthF0slh3MA5Gj05dvgdoTUOKbVaJs&_nc_ht=scontent.fbkk10-1.fna&oh=1a975ad84bac63d512462f32f92b98ad&oe=5DE3ECF6"
+                    class="d-block w-100" alt="..." />
                 </p>
-                <a href="/news/<%= feature.id %>" class="btn btn-primary">อ่านข่าว</a>
+                
               </div>
             </div>
           </div>
-          <% }) %>
+          <div class="col-md-4">
+            <div class="card">
+
+              <div class="card-body">
+                <h5 class="card-title">แผนที่วัดเชียงโฉม</h5>
+                <p class="card-text">
+
+                  <img
+                    src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/67454551_669986473487490_8122632095676760064_n.png?_nc_cat=109&_nc_eui2=AeHettQqI6EwVAuJe6_xFuByVvHUzwmc6J_AT_yRRmWxB17gsxdsAuZoUpQ6nr_3A8JVMKrGttxMqTqB_k0Zl8CS6csnxfnKc17DkMFIfchYIw&_nc_oc=AQnGm5cZIp3kBBvJjmOfK1ZHY40DCQbsts9WXrBFxkIQqJhSXG_6YRvmum8Bj2gIlQg&_nc_ht=scontent.fbkk10-1.fna&oh=b74b208c8a2ba22aea802228670b0e65&oe=5DE65CB6"
+                    class="d-block w-100" alt="..." />
+
+                </p>
+                
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
       <div class="col-3">
-        <h4 class="mt-3">เจ้าอาวาสวัด</h4>
-        <img src="/img/download.jpg" alt="" class="w-100" />
-        <div class="fb-page mt-3"
+        <h4 class="mt-1">เจ้าอาวาส</h4>
+        <img src="//480x500" alt="" class="w-100" />
+        <img
+          src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/67266698_2863073200373909_74197956630151168_n.jpg?_nc_cat=105&_nc_eui2=AeG9N2N-_VuOlfkR2frI_OT0zO1J64-IWNq_dC433nqzH4MbXW13hDVY0QfF_n1blFaAhEhnx6sKYYKgW-LbDnbuWUXSeEZxfNoDoehDR8iifw&_nc_oc=AQkI-pH1d1ZyBeZhSFdu4ASQkuvhLRTFxX7oAjbERGUhmYD_w3kAC6BREWrw1jEOPng&_nc_ht=scontent.fbkk10-1.fna&oh=5a66194b47431dc0a7c4938f2b1b019e&oe=5DAD333F"
+          class="d-block w-100" alt="..." />
+          <div class="fb-page mt-3"
           data-href="https://www.facebook.com/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%82%E0%B8%89%E0%B8%A1-_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87-379578932444639/?epa=SEARCH_BOX"
           data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
           data-hide-cover="false" data-show-facepile="true">
@@ -149,8 +217,8 @@
               href="https://www.facebook.com/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%82%E0%B8%89%E0%B8%A1-_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A5%E0%B9%88%E0%B8%AD%E0%B8%87-379578932444639/?epa=SEARCH_BOX">วัดเชียงโฉม
               _วัดเจดีย์ปล่อง</a></blockquote>
         </div>
-        
-        </div>
+        <a target="_blank" href="" title="">
+
       </div>
     </div>
 
@@ -159,33 +227,39 @@
         <div class="col-4">
           <h4>ลิงค์ด่วน</h4>
           <ul class="list-unstyled">
-            <li><a href="#">หน้าหลัก</a></li>
-            <li><a href="#">ทดสอบ</a></li>
-            <li><a href="#">ทดสอบ</a></li>
-            <li><a href="#">ทดสอบ</a></li>
-            <li><a href="#">ทดสอบ</a></li>
+            <li><a target=_blank
+                href="https://www.dhammaprayer.com/%E0%B8%9A%E0%B8%97%E0%B8%AA%E0%B8%A7%E0%B8%94%E0%B8%A1%E0%B8%99%E0%B8%95%E0%B9%8C%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%99%E0%B8%AD%E0%B8%99/?fbclid=IwAR0tzdWA_giinMgBEc0YUAEY5lsGy81aRtnG3mCKWlvuKXgH0NUbpbrn0Dk">บทสวดมนต์ก่อนนอน</a>
+            </li>
+            <li><a target=_blank
+                href="https://www.dhammaprayer.com/%E0%B8%9A%E0%B8%97%E0%B8%AA%E0%B8%A7%E0%B8%94%E0%B8%A1%E0%B8%99%E0%B8%95%E0%B9%8C-%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95/?fbclid=IwAR2rWXQOSf8CK3TCFQ09XAKqmfKE6nGG56BsfyldJlSbimXR0_S30jqQoFE">บทสวดมนต์เปลี่ยนชีวิต</a>
+            </li>
+            <li><a target=_blank
+                href="https://www.dhammaprayer.com/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B8%99%E0%B9%8C-%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1/?fbclid=IwAR0BaHh1Uki8Vw6CtzOseY-ygUpjwgDO3IiMw0xAjOh2ABzwYP0dzv9rcpA">ฟังเทศน์
+                ฟังธรรม</a></li>
+
           </ul>
         </div>
         <div class="col-4">
-          <h4>ลิงค์น่าสนใจ</h4>
+          <h4>บทสวดมนต์</h4>
           <ul class="list-unstyled">
-            <li><a href="#">หน้าหลัก</a></li>
-            <li><a href="#">ทดสอบ</a></li>
-            <li><a href="#">ทดสอบ</a></li>
-            <li><a href="#">ทดสอบ</a></li>
-            <li><a href="#">ทดสอบ</a></li>
+            <li><a target=_blank href="https://www.springnews.co.th/thailand/526128">คำถวายเทียนพรรษา</a></li>
+            <li><a target=_blank href="https://dhamma.mthai.com/pray/797.html">คําถวายสังฆทาน</a></li>
+            <li><a target=_blank href="https://dhamma.mthai.com/pray/5165.html">คําสมาทานศีล</a></li>
+
           </ul>
         </div>
         <div class="col-4">
           <i class="fas fa-gopuram fa-4x"></i>
           <address>
             <strong>วัดเชียงโฉม</strong> <br />
-            วัดเชียงโฉม หรือ วัดเวียงเชียงโฉม หรือ วัดเจดีย์ปล่อง
-            <p>ถ.ประชาอุทิศ ต.ช้างเผือก อ.เมือง จ.เชียงใหม่</p>
+            วัดเวียงเชียงโฉม ถ.ประชาอุทิศ ต.ช้างเผือก อ.เมือง จ.เชียงใหม่
+            <p>โทร 084 139 5183</p>
           </address>
         </div>
       </div>
-      <p class="p-3">&copy; สงวนสิทธิ์ 2019, คณะผู้จัดทำ</p>
+      <p class="p-3">&copy; สงวนสิทธิ์ 2019, สาขาวิชาเทคโนโลยีสารสนเทศ <br>
+        ภาควิชาคอมพิวเตอร์, คณะวิทยาศาสตร์และเทคโนโลยี, <br>มหาวิทยาลัยราชภัฏเชียงใหม่
+      </p>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -197,7 +271,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
 </body>
 
 </html>
